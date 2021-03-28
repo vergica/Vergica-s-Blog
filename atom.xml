@@ -6,7 +6,7 @@
   <link href="https://qydongang.github.io/atom.xml" rel="self"/>
   
   <link href="https://qydongang.github.io/"/>
-  <updated>2021-03-27T14:45:30.617Z</updated>
+  <updated>2021-03-28T08:00:17.303Z</updated>
   <id>https://qydongang.github.io/</id>
   
   <author>
@@ -17,30 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My awesome title</title>
-    <link href="https://qydongang.github.io/2016/10/12/hello-world/"/>
-    <id>https://qydongang.github.io/2016/10/12/hello-world/</id>
-    <published>2016-10-12T10:38:45.000Z</published>
-    <updated>2021-03-27T14:45:30.617Z</updated>
+    <title>snap重新下载软件</title>
+    <link href="https://qydongang.github.io/2021/03/28/snap%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://qydongang.github.io/2021/03/28/snap%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/</id>
+    <published>2021-03-28T07:35:00.000Z</published>
+    <updated>2021-03-28T08:00:17.303Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>今天用Ubuntu自带的应用商店下载PyCharm,太慢了不能忍就取消了，结果之后怎么下也下不成了,一直报错。<br><code>error: snap &quot;pycharm-community&quot; has &quot;install-snap&quot; change in progress</code><br>查找资料后终于发现了解决办法。下载软件不要用应用商店，用命令行。<br>1.出现这种状况多半是之前安装错误的软件还没安装完。先检查一下：<code>snap changes</code><br>发现是这样子的：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ID   Status  Spawn                      Ready                   Summary</span><br><span class="line">1    Done    46 days ago, at 02:57 CST  yesterday at 14:57 CST  Initialize system state</span><br><span class="line">2    Done    yesterday at 14:56 CST     yesterday at 14:56 CST  Initialize device</span><br><span class="line">3    Done    today at 10:24 CST         today at 10:26 CST      Auto-refresh snap &quot;snapd&quot;</span><br><span class="line">4    Doing   today at 10:36 CST         -                       Install &quot;pycharm-community&quot; snap from &quot;latest&#x2F;stable&quot; channel</span><br></pre></td></tr></table></figure><p>2.终止id=4的安装，我加了sudo，不确定：<code>snap abort 4</code><br>3.重新搜索一下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jason@jason-B365M-H:~$ snap find pycharm</span><br><span class="line">Name                  Version   Publisher   Notes    Summary</span><br><span class="line">pycharm-community     2020.3.5  jetbrains✓  classic  Python IDE for Professional Developers</span><br><span class="line">pycharm-professional  2020.3.5  jetbrains✓  classic  Python IDE for Professional Developers</span><br><span class="line">pycharm-educational   2020.3.4  jetbrains✓  classic  Easy and Professional Tool to Learn &amp; Teach Programming with Python</span><br></pre></td></tr></table></figure><p>输入<code>snap install pycharm-community --classic</code>再次安装即可。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;p&gt;今天用Ubuntu自带的应用商店下载PyCharm,太慢了不能忍就取消了，结果之后怎么下也下不成了,一直报错。&lt;br&gt;&lt;code&gt;error: snap &amp;quot;pycharm-community&amp;quot; has &amp;quot;install-snap&amp;quot; c</summary>
       
     
     
     
-    <category term="分类1" scheme="https://qydongang.github.io/categories/%E5%88%86%E7%B1%BB1/"/>
-    
-    <category term="分类2" scheme="https://qydongang.github.io/categories/%E5%88%86%E7%B1%BB1/%E5%88%86%E7%B1%BB2/"/>
+    <category term="Ubuntu" scheme="https://qydongang.github.io/categories/Ubuntu/"/>
     
     
-    <category term="标签1" scheme="https://qydongang.github.io/tags/%E6%A0%87%E7%AD%BE1/"/>
-    
-    <category term="标签2" scheme="https://qydongang.github.io/tags/%E6%A0%87%E7%AD%BE2/"/>
+    <category term="snap" scheme="https://qydongang.github.io/tags/snap/"/>
     
   </entry>
   
