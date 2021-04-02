@@ -6,7 +6,7 @@
   <link href="https://vergica.github.io/atom.xml" rel="self"/>
   
   <link href="https://vergica.github.io/"/>
-  <updated>2021-04-02T12:32:51.483Z</updated>
+  <updated>2021-04-02T13:28:46.412Z</updated>
   <id>https://vergica.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动部署GiteePages</title>
+    <link href="https://vergica.github.io/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/"/>
+    <id>https://vergica.github.io/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/</id>
+    <published>2021-04-02T13:20:00.000Z</published>
+    <updated>2021-04-02T13:28:46.412Z</updated>
+    
+    <content type="html"><![CDATA[<p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">driver &#x3D; webdriver.Firefox(executable_path&#x3D;&#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;geckodriver&#39;)</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;login&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_id(&#39;user_login&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee账号</span><br><span class="line">driver.find_element_by_id(&#39;user_password&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee密码</span><br><span class="line">driver.find_element_by_name(&#39;commit&#39;).click()</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;vergica&#x2F;vergica&#x2F;pages&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_css_selector(&#39;.button.orange.redeploy-button.ui.update_deploy&#39;).click()</span><br><span class="line">alertObject &#x3D; driver.switch_to.alert</span><br><span class="line">alertObject.accept()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c</summary>
+      
+    
+    
+    
+    <category term="Blog" scheme="https://vergica.github.io/categories/Blog/"/>
+    
+    <category term="Python" scheme="https://vergica.github.io/categories/Blog/Python/"/>
+    
+    
+    <category term="gitee" scheme="https://vergica.github.io/tags/gitee/"/>
+    
+    <category term="geckodriver" scheme="https://vergica.github.io/tags/geckodriver/"/>
+    
+  </entry>
   
   <entry>
     <title>调用api下载安装snap包</title>

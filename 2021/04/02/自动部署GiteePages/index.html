@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>东港 - vergica的博客</title>
+    <title>自动部署GiteePages - 东港</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="vergica,"> 
-    
+    <meta name="description" content="在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。
+12345678910111,"> 
     <meta name="author" content="Jason He"> 
     <link rel="alternative" href="atom.xml" title="东港" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -35,27 +36,72 @@
 <body class="loading">
     <span id="config-title" style="display:none">东港</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                
-                    <div class="set">		
-  <h2>标签</h2>
-  <a href="/tags/geckodriver/" style="font-size: 14px; color: #9e9e9e">geckodriver</a> <a href="/tags/gitee/" style="font-size: 14px; color: #9e9e9e">gitee</a> <a href="/tags/snap/" style="font-size: 36px; color: #808080">snap</a>
-</div>
-
-                
-                </div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://vergica.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">自动部署GiteePages</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
             </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
 </div>
 
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">自动部署GiteePages</h1>
+        <div class="stuff">
+            <span>四月 02, 2021</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/geckodriver/" rel="tag">geckodriver</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/gitee/" rel="tag">gitee</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">driver &#x3D; webdriver.Firefox(executable_path&#x3D;&#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;geckodriver&#39;)</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;login&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_id(&#39;user_login&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee账号</span><br><span class="line">driver.find_element_by_id(&#39;user_password&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee密码</span><br><span class="line">driver.find_element_by_name(&#39;commit&#39;).click()</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;vergica&#x2F;vergica&#x2F;pages&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_css_selector(&#39;.button.orange.redeploy-button.ui.update_deploy&#39;).click()</span><br><span class="line">alertObject &#x3D; driver.switch_to.alert</span><br><span class="line">alertObject.accept()</span><br></pre></td></tr></table></figure>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='https://api.uomg.com/api/rand.music?mid=71384707&format=mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci='e757a107085342895fa3'
+        data-cs='65db3b71909c64c9b20950038c1c7a8d215d4887'
+        data-r='vergica.github.io'
+        data-o='vergica'
+        data-a='vergica'
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
