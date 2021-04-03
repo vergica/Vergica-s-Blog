@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>自动部署GiteePages - 东港</title>
+    <title>爬取图片并上传至图床 - 东港</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="vergica,"> 
-    <meta name="description" content="在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。
-12345678910111,"> 
+    <meta name="description" content="本来博客文章封面采用的是随机外链，后来想想不靠谱，还是从网上爬了50张图片充当门面。附上代码：
+12345678910111213141516171819202122# coding&amp;#x3D;ut,"> 
     <meta name="author" content="Jason He"> 
     <link rel="alternative" href="atom.xml" title="东港" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -41,7 +41,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://vergica.github.io"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">自动部署GiteePages</h3>
+    <h3 class="subtitle">爬取图片并上传至图床</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -56,17 +56,18 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">自动部署GiteePages</h1>
+        <h1 class="title">爬取图片并上传至图床</h1>
         <div class="stuff">
-            <span>四月 02, 2021</span>
+            <span>四月 03, 2021</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/geckodriver/" rel="tag">geckodriver</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/sm%E5%9B%BE%E5%BA%8A/" rel="tag">sm图床</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">options &#x3D; webdriver.FirefoxOptions()</span><br><span class="line">options.add_argument(&quot;--headless&quot;)</span><br><span class="line">options.add_argument(&quot;--disable-gpu&quot;)</span><br><span class="line">driver &#x3D; webdriver.Firefox(executable_path&#x3D;&#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;geckodriver&#39;, options&#x3D;options)</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;login&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_id(&#39;user_login&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee账号</span><br><span class="line">driver.find_element_by_id(&#39;user_password&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee密码</span><br><span class="line">driver.find_element_by_name(&#39;commit&#39;).click()</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;vergica&#x2F;vergica&#x2F;pages&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_css_selector(&#39;.button.orange.redeploy-button.ui.update_deploy&#39;).click()</span><br><span class="line">alertObject &#x3D; driver.switch_to.alert</span><br><span class="line">alertObject.accept()</span><br><span class="line">driver.quit()</span><br><span class="line">print(&#39;更新完毕！&#39;)</span><br></pre></td></tr></table></figure>
+            <p>本来博客文章封面采用的是随机外链，后来想想不靠谱，还是从网上爬了50张图片充当门面。附上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import requests</span><br><span class="line">import hashlib  # 通过校验md5去重</span><br><span class="line">i &#x3D; 1</span><br><span class="line">l &#x3D; []</span><br><span class="line">url &#x3D; &#39;https:&#x2F;&#x2F;sm.ms&#x2F;api&#x2F;v2&#x2F;upload&#39;</span><br><span class="line">headers &#x3D; &#123;&#39;Authorization&#39;: &#39;xxxxxx&#39;&#125;  # 需要注册sm图床账号</span><br><span class="line">while i &lt;&#x3D; 50:</span><br><span class="line">    res &#x3D; requests.get(&#39;http:&#x2F;&#x2F;acg.yanwz.cn&#x2F;wallpaper&#x2F;api.php&#39;).content  # 感谢汐岑提供接口</span><br><span class="line">    text &#x3D; hashlib.md5(res).hexdigest()</span><br><span class="line">    if text not in l:</span><br><span class="line">        try:</span><br><span class="line">            l.append(text)</span><br><span class="line">            path &#x3D; &#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;BlogCover&#x2F;cover&#x2F;&#123;&#125;&#39;.format(i)</span><br><span class="line">            with open(path, &#39;wb&#39;) as f:</span><br><span class="line">                f.write(res)</span><br><span class="line">            files &#x3D; &#123;&#39;smfile&#39;: open(path, &#39;rb&#39;)&#125;</span><br><span class="line">            res2 &#x3D; requests.post(url, files&#x3D;files, headers&#x3D;headers).json()</span><br><span class="line">            print(&#39;  - &#39; + res2[&#39;data&#39;][&#39;url&#39;])</span><br><span class="line">            i +&#x3D; 1</span><br><span class="line">        except Exception as e:</span><br><span class="line">            pass</span><br></pre></td></tr></table></figure>
+<p>友情提示：注册时有可能会需要科学上网哈～～我目前发现<a target="_blank" rel="noopener" href="https://github.com/getlantern/lantern">lantern</a>还不错，详情自己google吧。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
