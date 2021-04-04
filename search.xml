@@ -17,6 +17,20 @@
       </tags>
   </entry>
   <entry>
+    <title>写第一个shell脚本</title>
+    <url>/2021/04/04/%E5%86%99%E7%AC%AC%E4%B8%80%E4%B8%AAshell%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<p>初涉shell脚本，发现真的方便许多，起码部署博客方便啦！原来这和终端运行命令是一样的～</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">cd &#x2F;home&#x2F;jason&#x2F;blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">python3 &#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;main.py</span><br></pre></td></tr></table></figure>
+<p>然后给脚本添加执行权限：<code>chmod +x ./refresh.sh</code><br>如果嫌麻烦，可以再在文件管理器中调整可执行文件的首选项，把“显示”改为“询问做什么”。</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装坚果云作为同步盘</title>
     <url>/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</url>
     <content><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>
@@ -43,18 +57,6 @@
       </tags>
   </entry>
   <entry>
-    <title>调用api下载安装snap包</title>
-    <url>/2021/03/28/%E8%B0%83%E7%94%A8api%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85snap%E5%8C%85/</url>
-    <content><![CDATA[<p>说来尴尬，之前那篇文章发完，发现snap要下载3个多小时，还是放弃了……好在后来找到了一种快些的办法。<br>1.通过snapcraft.io页面找到你需要的snap包的url，这里以pycharm-community为例，它的url是snapcraft.io/pycharm-community。<br>2.安装curl，调用api。<br><code>curl -H &#39;Snap-Device-Series: 16&#39; http://api.snapcraft.io/v2/snaps/info/pycharm-community</code><br>然后对返回的json解析，比如说去json.cn，找到对应的url。<br>3.安装axel，开始多线程下载。<br><code>axel -n 32 -o /home/jason/下载 https://api.snapcraft.io/api/v1/snaps/download/Qo9GiW9eyzgN1tXmWpQ9gdstdFsj4K7E_233.snap</code><br>4.重命名，安装下载下来的snap包即可。<br><code>sudo snap install pycharm-community.snap --dangerous</code></p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>snap</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>自动部署GiteePages</title>
     <url>/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/</url>
     <content><![CDATA[<p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p>
@@ -65,6 +67,18 @@
       </categories>
       <tags>
         <tag>geckodriver</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>调用api下载安装snap包</title>
+    <url>/2021/03/28/%E8%B0%83%E7%94%A8api%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85snap%E5%8C%85/</url>
+    <content><![CDATA[<p>说来尴尬，之前那篇文章发完，发现snap要下载3个多小时，还是放弃了……好在后来找到了一种快些的办法。<br>1.通过snapcraft.io页面找到你需要的snap包的url，这里以pycharm-community为例，它的url是snapcraft.io/pycharm-community。<br>2.安装curl，调用api。<br><code>curl -H &#39;Snap-Device-Series: 16&#39; http://api.snapcraft.io/v2/snaps/info/pycharm-community</code><br>然后对返回的json解析，比如说去json.cn，找到对应的url。<br>3.安装axel，开始多线程下载。<br><code>axel -n 32 -o /home/jason/下载 https://api.snapcraft.io/api/v1/snaps/download/Qo9GiW9eyzgN1tXmWpQ9gdstdFsj4K7E_233.snap</code><br>4.重命名，安装下载下来的snap包即可。<br><code>sudo snap install pycharm-community.snap --dangerous</code></p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>snap</tag>
       </tags>
   </entry>
 </search>
