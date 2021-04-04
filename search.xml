@@ -17,18 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安装坚果云作为同步盘</title>
-    <url>/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</url>
-    <content><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>坚果云</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬取图片并上传至图床</title>
     <url>/2021/04/03/%E7%88%AC%E5%8F%96%E5%9B%BE%E7%89%87%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p>本来博客文章封面采用的是随机外链，后来想想不靠谱，还是从网上爬了50张图片充当门面。附上代码：</p>
@@ -65,6 +53,18 @@
       </categories>
       <tags>
         <tag>snap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装坚果云作为同步盘</title>
+    <url>/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</url>
+    <content><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>坚果云</tag>
       </tags>
   </entry>
 </search>
