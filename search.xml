@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>gitalk自动初始化</title>
+    <url>/2021/04/04/gitalk%E8%87%AA%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>geckodriver</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>snap重新下载软件</title>
     <url>/2021/03/28/snap%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<p>今天用Ubuntu自带的应用商店下载PyCharm,太慢了不能忍就取消了，结果之后怎么下也下不成了,一直报错。<br><code>error: snap &quot;pycharm-community&quot; has &quot;install-snap&quot; change in progress</code><br>查找资料后终于发现了解决办法。下载软件不要用应用商店，用命令行。<br>1.出现这种状况多半是之前安装错误的软件还没安装完。先检查一下：<code>snap changes</code><br>发现是这样子的：</p>
@@ -31,6 +42,18 @@
       </tags>
   </entry>
   <entry>
+    <title>安装坚果云作为同步盘</title>
+    <url>/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</url>
+    <content><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>坚果云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自动部署GiteePages</title>
     <url>/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/</url>
     <content><![CDATA[<p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p>
@@ -53,18 +76,6 @@
       </categories>
       <tags>
         <tag>snap</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安装坚果云作为同步盘</title>
-    <url>/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</url>
-    <content><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>
-]]></content>
-      <categories>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>坚果云</tag>
       </tags>
   </entry>
 </search>

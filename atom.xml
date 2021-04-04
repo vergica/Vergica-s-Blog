@@ -6,7 +6,7 @@
   <link href="https://vergica.github.io/atom.xml" rel="self"/>
   
   <link href="https://vergica.github.io/"/>
-  <updated>2021-04-04T05:41:56.772Z</updated>
+  <updated>2021-04-04T10:19:09.936Z</updated>
   <id>https://vergica.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gitalk自动初始化</title>
+    <link href="https://vergica.github.io/2021/04/04/gitalk%E8%87%AA%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
+    <id>https://vergica.github.io/2021/04/04/gitalk%E8%87%AA%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96/</id>
+    <published>2021-04-04T10:18:00.000Z</published>
+    <updated>2021-04-04T10:19:09.936Z</updated>
+    
+    
+    
+    
+    <category term="Python" scheme="https://vergica.github.io/categories/Python/"/>
+    
+    
+    <category term="geckodriver" scheme="https://vergica.github.io/tags/geckodriver/"/>
+    
+  </entry>
   
   <entry>
     <title>安装坚果云作为同步盘</title>
