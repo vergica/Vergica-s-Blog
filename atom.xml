@@ -6,7 +6,7 @@
   <link href="https://vergica.github.io/atom.xml" rel="self"/>
   
   <link href="https://vergica.github.io/"/>
-  <updated>2021-04-03T12:44:32.349Z</updated>
+  <updated>2021-04-04T05:41:56.772Z</updated>
   <id>https://vergica.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装坚果云作为同步盘</title>
+    <link href="https://vergica.github.io/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/"/>
+    <id>https://vergica.github.io/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</id>
+    <published>2021-04-04T05:37:00.000Z</published>
+    <updated>2021-04-04T05:41:56.772Z</updated>
+    
+    <content type="html"><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。&lt;br&gt;按照&lt;a href=&quot;https://www.jianguoyun.com/s/downloads/linux&quot;&gt;官网&lt;/a&gt;一步步安装就好了，一些同步功能还是满贴心的</summary>
+      
+    
+    
+    
+    <category term="Ubuntu" scheme="https://vergica.github.io/categories/Ubuntu/"/>
+    
+    
+    <category term="坚果云" scheme="https://vergica.github.io/tags/%E5%9D%9A%E6%9E%9C%E4%BA%91/"/>
+    
+  </entry>
   
   <entry>
     <title>爬取图片并上传至图床</title>
