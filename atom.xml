@@ -6,7 +6,7 @@
   <link href="https://vergica.github.io/atom.xml" rel="self"/>
   
   <link href="https://vergica.github.io/"/>
-  <updated>2021-04-05T02:37:48.873Z</updated>
+  <updated>2021-04-05T03:22:24.123Z</updated>
   <id>https://vergica.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://vergica.github.io/2021/04/04/%E5%86%99%E7%AC%AC%E4%B8%80%E4%B8%AAshell%E8%84%9A%E6%9C%AC/"/>
     <id>https://vergica.github.io/2021/04/04/%E5%86%99%E7%AC%AC%E4%B8%80%E4%B8%AAshell%E8%84%9A%E6%9C%AC/</id>
     <published>2021-04-04T11:22:00.000Z</published>
-    <updated>2021-04-05T02:37:48.873Z</updated>
+    <updated>2021-04-05T03:22:24.123Z</updated>
     
     <content type="html"><![CDATA[<p>初涉shell脚本，发现真的方便许多，起码部署博客方便啦！原来这和终端运行命令是一样的～</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">cd &#x2F;home&#x2F;jason&#x2F;blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">python3 &#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;main.py</span><br></pre></td></tr></table></figure><p>然后给脚本添加执行权限：<code>chmod +x ./refresh.sh</code><br>如果嫌麻烦，可以再在文件管理器中调整可执行文件的首选项，把“显示”改为“询问做什么”。</p>]]></content>
     
@@ -46,7 +46,7 @@
     <link href="https://vergica.github.io/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/"/>
     <id>https://vergica.github.io/2021/04/04/%E5%AE%89%E8%A3%85%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%AD%A5%E7%9B%98/</id>
     <published>2021-04-04T05:37:00.000Z</published>
-    <updated>2021-04-05T02:33:08.882Z</updated>
+    <updated>2021-04-05T03:22:57.395Z</updated>
     
     <content type="html"><![CDATA[<p>对百度网盘的限速忍无可忍，一番了解后，换成使用坚果云，免费版有上传下载的流量限制，不过勉强够用了。<br>按照<a href="https://www.jianguoyun.com/s/downloads/linux">官网</a>一步步安装就好了，一些同步功能还是满贴心的，其他功能有待发掘。</p>]]></content>
     
@@ -70,7 +70,7 @@
     <link href="https://vergica.github.io/2021/04/03/%E7%88%AC%E5%8F%96%E5%9B%BE%E7%89%87%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3%E5%9B%BE%E5%BA%8A/"/>
     <id>https://vergica.github.io/2021/04/03/%E7%88%AC%E5%8F%96%E5%9B%BE%E7%89%87%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3%E5%9B%BE%E5%BA%8A/</id>
     <published>2021-04-03T07:25:00.000Z</published>
-    <updated>2021-04-05T02:37:50.193Z</updated>
+    <updated>2021-04-05T03:22:35.483Z</updated>
     
     <content type="html"><![CDATA[<p>本来博客文章封面采用的是随机外链，后来想想不靠谱，还是从网上爬了50张图片充当门面。附上代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import requests</span><br><span class="line">import hashlib  # 通过校验md5去重</span><br><span class="line">i &#x3D; 1</span><br><span class="line">l &#x3D; []</span><br><span class="line">url &#x3D; &#39;https:&#x2F;&#x2F;sm.ms&#x2F;api&#x2F;v2&#x2F;upload&#39;</span><br><span class="line">headers &#x3D; &#123;&#39;Authorization&#39;: &#39;xxxxxx&#39;&#125;  # 需要注册sm图床账号</span><br><span class="line">while i &lt;&#x3D; 50:</span><br><span class="line">    res &#x3D; requests.get(&#39;http:&#x2F;&#x2F;acg.yanwz.cn&#x2F;wallpaper&#x2F;api.php&#39;).content  # 感谢汐岑提供接口</span><br><span class="line">    text &#x3D; hashlib.md5(res).hexdigest()</span><br><span class="line">    if text not in l:</span><br><span class="line">        try:</span><br><span class="line">            l.append(text)</span><br><span class="line">            path &#x3D; &#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;BlogCover&#x2F;cover&#x2F;&#123;&#125;&#39;.format(i)</span><br><span class="line">            with open(path, &#39;wb&#39;) as f:</span><br><span class="line">                f.write(res)</span><br><span class="line">            files &#x3D; &#123;&#39;smfile&#39;: open(path, &#39;rb&#39;)&#125;</span><br><span class="line">            res2 &#x3D; requests.post(url, files&#x3D;files, headers&#x3D;headers).json()</span><br><span class="line">            print(&#39;  - &#39; + res2[&#39;data&#39;][&#39;url&#39;])</span><br><span class="line">            i +&#x3D; 1</span><br><span class="line">        except Exception as e:</span><br><span class="line">            pass</span><br></pre></td></tr></table></figure><p>友情提示：注册时有可能会需要科学上网哈～～我目前发现<a href="https://github.com/getlantern/lantern">lantern</a>还不错，详情自己google吧。</p>]]></content>
     
@@ -95,7 +95,7 @@
     <link href="https://vergica.github.io/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/"/>
     <id>https://vergica.github.io/2021/04/02/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2GiteePages/</id>
     <published>2021-04-02T13:20:00.000Z</published>
-    <updated>2021-04-05T02:34:21.888Z</updated>
+    <updated>2021-04-05T03:22:13.167Z</updated>
     
     <content type="html"><![CDATA[<p>在国内，Gitee访问速度比Github快很多，但不得不说，每次要人为点击“更新”太恶心了……于是用python写了几行代码实现自动部署GiteePages，欢迎斧正。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">options &#x3D; webdriver.FirefoxOptions()</span><br><span class="line">options.add_argument(&quot;--headless&quot;)</span><br><span class="line">options.add_argument(&quot;--disable-gpu&quot;)</span><br><span class="line">driver &#x3D; webdriver.Firefox(executable_path&#x3D;&#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;geckodriver&#39;, options&#x3D;options)</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;login&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_id(&#39;user_login&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee账号</span><br><span class="line">driver.find_element_by_id(&#39;user_password&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee密码</span><br><span class="line">driver.find_element_by_name(&#39;commit&#39;).click()</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;vergica&#x2F;vergica&#x2F;pages&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_css_selector(&#39;.button.orange.redeploy-button.ui.update_deploy&#39;).click()</span><br><span class="line">alertObject &#x3D; driver.switch_to.alert</span><br><span class="line">alertObject.accept()</span><br><span class="line">driver.quit()</span><br><span class="line">print(&#39;更新完毕！&#39;)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -120,7 +120,7 @@
     <link href="https://vergica.github.io/2021/03/28/%E8%B0%83%E7%94%A8api%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85snap%E5%8C%85/"/>
     <id>https://vergica.github.io/2021/03/28/%E8%B0%83%E7%94%A8api%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85snap%E5%8C%85/</id>
     <published>2021-03-28T08:33:00.000Z</published>
-    <updated>2021-04-05T02:33:30.963Z</updated>
+    <updated>2021-04-05T03:22:46.419Z</updated>
     
     <content type="html"><![CDATA[<p>说来尴尬，之前那篇文章发完，发现snap要下载3个多小时，还是放弃了……好在后来找到了一种快些的办法。<br>1.通过snapcraft.io页面找到你需要的snap包的url，这里以pycharm-community为例，它的url是snapcraft.io/pycharm-community。<br>2.安装curl，调用api。<br><code>curl -H &#39;Snap-Device-Series: 16&#39; http://api.snapcraft.io/v2/snaps/info/pycharm-community</code><br>然后对返回的json解析，比如说去json.cn，找到对应的url。<br>3.安装axel，开始多线程下载。<br><code>axel -n 32 -o /home/jason/下载 https://api.snapcraft.io/api/v1/snaps/download/Qo9GiW9eyzgN1tXmWpQ9gdstdFsj4K7E_233.snap</code><br>4.重命名，安装下载下来的snap包即可。<br><code>sudo snap install pycharm-community.snap --dangerous</code></p>]]></content>
     
@@ -144,7 +144,7 @@
     <link href="https://vergica.github.io/2021/03/28/snap%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/"/>
     <id>https://vergica.github.io/2021/03/28/snap%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/</id>
     <published>2021-03-28T07:35:00.000Z</published>
-    <updated>2021-04-05T02:34:33.836Z</updated>
+    <updated>2021-04-05T03:22:00.331Z</updated>
     
     <content type="html"><![CDATA[<p>今天用Ubuntu自带的应用商店下载PyCharm,太慢了不能忍就取消了，结果之后怎么下也下不成了,一直报错。<br><code>error: snap &quot;pycharm-community&quot; has &quot;install-snap&quot; change in progress</code><br>查找资料后终于发现了解决办法。下载软件不要用应用商店，用命令行。<br>1.出现这种状况多半是之前安装错误的软件还没安装完。先检查一下：<code>snap changes</code><br>发现是这样子的：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ID   Status  Spawn                      Ready                   Summary</span><br><span class="line">1    Done    46 days ago, at 02:57 CST  yesterday at 14:57 CST  Initialize system state</span><br><span class="line">2    Done    yesterday at 14:56 CST     yesterday at 14:56 CST  Initialize device</span><br><span class="line">3    Done    today at 10:24 CST         today at 10:26 CST      Auto-refresh snap &quot;snapd&quot;</span><br><span class="line">4    Doing   today at 10:36 CST         -                       Install &quot;pycharm-community&quot; snap from &quot;latest&#x2F;stable&quot; channel</span><br></pre></td></tr></table></figure><p>2.终止id=4的安装：<code>snap abort 4</code><br>3.重新搜索一下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jason@jason-B365M-H:~$ snap find pycharm</span><br><span class="line">Name                  Version   Publisher   Notes    Summary</span><br><span class="line">pycharm-community     2020.3.5  jetbrains✓  classic  Python IDE for Professional Developers</span><br><span class="line">pycharm-professional  2020.3.5  jetbrains✓  classic  Python IDE for Professional Developers</span><br><span class="line">pycharm-educational   2020.3.4  jetbrains✓  classic  Easy and Professional Tool to Learn &amp; Teach Programming with Python</span><br></pre></td></tr></table></figure><p>输入<code>snap install pycharm-community --classic</code>再次安装即可。</p>]]></content>
     

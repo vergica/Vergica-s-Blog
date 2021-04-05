@@ -69,23 +69,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># coding&#x3D;utf-8</span><br><span class="line">import time</span><br><span class="line">from selenium import webdriver</span><br><span class="line">options &#x3D; webdriver.FirefoxOptions()</span><br><span class="line">options.add_argument(&quot;--headless&quot;)</span><br><span class="line">options.add_argument(&quot;--disable-gpu&quot;)</span><br><span class="line">driver &#x3D; webdriver.Firefox(executable_path&#x3D;&#39;&#x2F;home&#x2F;jason&#x2F;PycharmProjects&#x2F;GiteePages&#x2F;geckodriver&#39;, options&#x3D;options)</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;login&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_id(&#39;user_login&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee账号</span><br><span class="line">driver.find_element_by_id(&#39;user_password&#39;).send_keys(&#39;xxxxxx&#39;)  # gitee密码</span><br><span class="line">driver.find_element_by_name(&#39;commit&#39;).click()</span><br><span class="line">driver.get(&#39;https:&#x2F;&#x2F;gitee.com&#x2F;vergica&#x2F;vergica&#x2F;pages&#39;)</span><br><span class="line">time.sleep(1)</span><br><span class="line">driver.find_element_by_css_selector(&#39;.button.orange.redeploy-button.ui.update_deploy&#39;).click()</span><br><span class="line">alertObject &#x3D; driver.switch_to.alert</span><br><span class="line">alertObject.accept()</span><br><span class="line">driver.quit()</span><br><span class="line">print(&#39;更新完毕！&#39;)</span><br></pre></td></tr></table></figure>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="http://music.163.com/song/media/outer/url?id=1060910.mp3">
             </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='https://api.uomg.com/api/rand.music?mid=71384707&format=mp3'></li>
-                        
-                    
-                </ul>
             
         </div>
         
     <div id='gitalk-container' class="comment link"
 		data-enable='true'
-        data-ae='false'
+        data-ae='true'
         data-ci='e757a107085342895fa3'
         data-cs='65db3b71909c64c9b20950038c1c7a8d215d4887'
         data-r='vergica.github.io'
